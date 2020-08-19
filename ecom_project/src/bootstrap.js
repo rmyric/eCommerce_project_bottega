@@ -12,13 +12,8 @@ import './style/main.scss';
 import history from './history';
 
 import Layout from './components/layout';
-// import Signin from './components/auth/signin';
-// import Signup from './components/auth/signup';
-// import Account from './components/account/account';
-// import Shop from './components/shop/shop';
-// import Review from './components/order/review';
-// import Shipping from './components/information/shipping';
-// import Payment from './components/information/payment';
+import Signin from './components/auth/signin';
+import Signup from './components/auth/signup';
 
 function main() {
   ReactDOM.render(
@@ -26,6 +21,7 @@ function main() {
       <Router history={history}>
         <Layout>
           <Switch>
+            <Route path='/' ></Route>
          
           </Switch>
         </Layout>
