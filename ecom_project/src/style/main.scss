@@ -11,13 +11,22 @@ html {
     
 }
 
+body {
+    font-family: "Open Sans";
+    color:#808008; 
+
+}
+
 
 
 @import 'layout';
 @import 'headernavbar';
 @import 'auth/signin';
 @import 'auth/signup';
+
 @import 'page-title';
+@import 'form-fields.scss';
+
 
 
 
