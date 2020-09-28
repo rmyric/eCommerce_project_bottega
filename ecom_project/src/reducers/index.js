@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import { reducer as Form } from 'redux-form';
+import { reducer as form } from 'redux-form';
 
 import headerNavbar from './headernavbarReducer';
 
 const rootReducer = combineReducers({
- Form,
+ form,
  headerNavbar
 });
 

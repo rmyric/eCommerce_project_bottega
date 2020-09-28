@@ -1,36 +1,39 @@
 import {
     SET_HEADER_LINKS,
     SET_NAVBAR_LINKS
-} from '../actions/types'
+} from '../actions/types';
 
 
 const INITIAL_STATE = {
-        headerLinks: [
-            {
-                title: 'yooo'
-            },
-            {
-                title: 'YOOO'
-            }
-        ],
-        navbarLinks: [
-            {
-                title: 'account'
-            },
-            {
-                title: 'purchases'
-            }
-        ]
+    headerLinks: [
+        {
+            title: 'yooo'
+        },
+        {
+            title: 'YOOO'
+        }
+    ],
+    navbarLinks: [
+        {
+            title: 'Account',
+            active: true
+        },
+        {
+            title: 'Purchases',
+            active: false
+        }
+    ]
 }
+        
 
-export default function (state = INITIAL_STATE, action) {
+
+export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case SET_HEADER_LINKS:
             return {
                 ...state,
                 headerLinks: action.payload
             }
-
         case SET_NAVBAR_LINKS:
             return {
                 ...state,
@@ -38,4 +41,4 @@ export default function (state = INITIAL_STATE, action) {
             }
         default: return state;
     }
-}
+} 
