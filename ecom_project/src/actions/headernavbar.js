@@ -10,11 +10,13 @@ export function setHeaderLinks(links) {
         payload: links
     })
 }
+
 export function setNavbarLinks(links) {
     return ({
         type: SET_NAVBAR_LINKS,
         payload: links
     })
+
 }
 
 export function changeNavbarActive(_id) {
