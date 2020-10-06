@@ -6,7 +6,6 @@ import PageTitle from '../pageTitle';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
-
 class SignIn extends Component {
 
     componentDidMount() {
@@ -14,22 +13,20 @@ class SignIn extends Component {
         this.props.setNavbarLinks([]);
     }
 
-
-    onSubmit = () => {
+    onSubmit = (fields) => {
         console.log(fields);
     }
 
     render() {
         return (
             <div className='sign-in'>
-                <PageTitle className='sign-in__page-title' title='Login'/>
-                <SignInForm onSubmit={this.onsubmit} className='sign-in__form'/>
+                <PageTitle className='sign-in__page-title' title='Login' />
+                <SignInForm onSubmit={this.onSubmit} className='sign-in__form' />
             </div>
         )
     }
 }
 
 SignIn = connect(null, actions)(SignIn);
-
 
 export default SignIn;

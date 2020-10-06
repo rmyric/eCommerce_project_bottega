@@ -1,14 +1,15 @@
+  
 import {
     SET_HEADER_LINKS,
     SET_NAVBAR_LINKS,
     CHANGE_NAVBAR_ACTIVE
 } from '../actions/types';
 
-
 const INITIAL_STATE = {
     headerLinks: [],
     navbarLinks: []
 }
+
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case SET_HEADER_LINKS:
@@ -35,4 +36,4 @@ export default function(state = INITIAL_STATE, action) {
             }
         default: return state;
     }
-} 
+}

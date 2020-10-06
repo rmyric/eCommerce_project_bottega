@@ -21,7 +21,7 @@ class SignUp extends Component {
         return (
             <div className='sign-up'>
                 <PageTitle className='sign-up__page-title' title='Register'/>
-                <SignInForm onSubmit={this.onsubmit} className='sign-up__form'/>
+                <SignUpForm onSubmit={this.onsubmit} className='sign-up__form'/>
             </div>
         )
     }
