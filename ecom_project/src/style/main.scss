@@ -21,17 +21,23 @@ body {
 
 @import 'layout';
 @import 'headernavbar';
-@import 'auth/signin';
-@import 'auth/signup';
+
 
 @import 'page-title';
 @import 'form-fields.scss';
 
 @import 'details.scss';
+// AUTH
+@import 'auth/signin';
+@import 'auth/signup';
 
+// ACCOUNT
 @import 'account/account';
 @import 'account/purchase-history';
 @import 'account/account-information';
+
+// SHOP
+@import 'shop/shop';
 
 
 

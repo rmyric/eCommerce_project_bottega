@@ -5,7 +5,9 @@ import {
 
 const INITIAL_STATE = {
     purchases: [],
-    purchaseDetail: {}
+    purchaseDetail: {
+     
+    }
 }
 
 export default function(state = INITIAL_STATE, action) {
