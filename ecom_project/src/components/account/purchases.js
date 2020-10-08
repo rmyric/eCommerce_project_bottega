@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
 class Purchases extends Component {
- 
+
     componentDidMount() {
         this.props.fetchUserPurchases();
     }
@@ -21,7 +21,6 @@ class Purchases extends Component {
                                 <img className='purchase__img' src='http://via.placeholder.com/80x80'/>
                             </a>
                         )
-
                     })
                 }
             </div>
@@ -36,4 +35,4 @@ function mapStateToProps(state) {
 
 Purchases = connect(mapStateToProps, actions)(Purchases);
 
-export default Purchases; 
+export default Purchases;

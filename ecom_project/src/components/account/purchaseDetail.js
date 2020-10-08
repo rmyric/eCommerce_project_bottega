@@ -18,10 +18,8 @@ function PurchaseDetailLabel({className, title, value}) {
 class PurchaseDetail extends Component {
     render() {
         const { className, orderNumber, orderDate, user, total, creditCard } = this.props;
-        
         const { name, shippingAddress } = user;
-        // const nameAddress = `${name}       ${shippingAddress}`
-       
+        const nameAddress = `${name}       ${shippingAddress}`
         return (
             <div className={`${className} purchase-detail`}>
                 <PurchaseDetailLabel
@@ -35,7 +33,7 @@ class PurchaseDetail extends Component {
                 <PurchaseDetailLabel
                  className='purchase-detail__shipping-address'
                  title='Shipping Address'
-                 value={`${name} \n ${shippingAddress}`}/>
+                 value={nameAddress}/>
                 <PurchaseDetailLabel
                  className='purchase-detail__total'
                  title='Total'

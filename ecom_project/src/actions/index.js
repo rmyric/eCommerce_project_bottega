@@ -10,19 +10,23 @@ import {
 } from './user';
 
 import {
-    fetchShopCategories
+    fetchShopCategories,
+    fetchShopProducts,
+    filterProductsWithCategoryId,
+    filterProductsWithQuery
 } from './shop';
-
 
 export {
     setHeaderLinks,
     setNavbarLinks,
     changeNavbarActive,
 
-
     fetchUserPurchases,
     setPurchaseDetail,
 
+    fetchShopCategories,
+    fetchShopProducts,
+    filterProductsWithCategoryId,
 
-    fetchShopCategories
-}; 
+    filterProductsWithQuery
+};

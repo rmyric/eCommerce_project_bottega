@@ -12,9 +12,7 @@
         grid-template-columns: [s cancel-s] 137px [cancel-e] 40px [update-s] 1fr [m] 1fr [update-e] 1fr [e];
         grid-row-gap: 15px;
     }
-        grid-row-gap: 15px;
-    }
-
+}
 
 .account-information-form {
 
@@ -49,7 +47,7 @@
             width: 200px;
         }
     }
-    
+
     &__change-password,
     &__current {
         grid-column: s/m;
@@ -71,6 +69,24 @@
     &__confirm {
         transform: translateY(-25px);
     }
-    
 
-} 
+    &__line {
+        grid-row: line-s/line-e;
+        grid-column: s/e;
+        border-top: 1px solid #ccc;
+        margin-bottom: 24px;
+    }
+
+    &__cancel {
+        grid-column: cancel-s/cancel-e;
+        grid-row: buttons-s/buttons-e;
+    }
+
+    &__update-information {
+        grid-column: update-s/update-e;
+        grid-row: buttons-s/buttons-e;
+
+    }
+
+
+}

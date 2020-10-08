@@ -1,5 +1,7 @@
+
+
 html {
-    font-size: 62.5%; // 1rem is 10px
+    font-size: 62.5%;
 }
 
 *,
@@ -8,26 +10,21 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    
 }
 
 body {
     font-family: "Open Sans";
-    color:#808008; 
-
+    color: #808080;
 }
-
 
 
 @import 'layout';
 @import 'headernavbar';
-
-
 @import 'page-title';
-@import 'form-fields.scss';
+@import 'form-fields';
+@import 'details';
 
-@import 'details.scss';
-// AUTH
+// AUTH 
 @import 'auth/signin';
 @import 'auth/signup';
 
@@ -38,8 +35,3 @@ body {
 
 // SHOP
 @import 'shop/shop';
-
-
-
-
-

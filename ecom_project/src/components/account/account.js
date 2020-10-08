@@ -53,6 +53,7 @@ class Account extends Component {
         }
         return jsx;
     }
+
     render() {
         return (
             <div className='account'>
@@ -61,10 +62,12 @@ class Account extends Component {
         )
     }
 }
+
 function mapStateToProps(state) {
     const { headerLinks, navbarLinks } = state.headerNavbar;
     return { headerLinks, navbarLinks }
 }
+
 Account = connect(mapStateToProps, actions)(Account);
 
 export default Account;
