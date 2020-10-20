@@ -6,7 +6,7 @@ class CartProduct extends Component {
     render() {
         console.log(this.props);
         const { className, product, quantity } = this.props;
-        const {  title,  price } = product;
+        const { title,  price } = product;
         return (
             <div className={`${className} cart-product`}>
                 <img className='cart-product__image' src='http://via.placeholder.com/130x130'/>
