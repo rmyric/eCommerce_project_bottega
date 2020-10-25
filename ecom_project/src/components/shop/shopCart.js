@@ -6,8 +6,10 @@ import * as actions from '../../actions';
 
 import CartButton from './cartButton';
 
-function CartContent({className, products}) {
-    let count = products.length();
+import history from '../../history';
+
+function CartContent({ className, products }) {
+    let count = products.length;
     let productsJSX = products.map(product => <CartProduct {...product} key={product._id}/>);
     return (
         <div className={`${className} cart-content`}>
@@ -15,7 +17,7 @@ function CartContent({className, products}) {
                 Cart ({count})
             </div>
             <div className='cart-content__products'>
-                    {productsJSX}
+                 {productsJSX}
             </div>
             <CartFooter className='cart-content__footer' products={products}/>
 
@@ -26,7 +28,7 @@ function CartFooter({className, products}) {
     const price = 7.96;
     return (
         <div className={`${className} cart-footer`}>
-            <a className='cart-footer__checkout'>
+            <a onClick={() => history.push('/order/review')} className='cart-footer__checkout'>
                 Checkout
             </a>
             <div className='cart-footer__subtotal'>
@@ -59,7 +61,7 @@ class ShopCart extends Component {
         return (
             <div id='shop-cart' className={`${className} shop-cart cart-hidden`}>
                 <CartButton className='shop-cart__toggle' icon='fas fa-times' onClick={this.handleAddToCart}/>
-                <CartContent className='shop-cart__content' products={this.props.cartProduts}/>
+                <CartContent className='shop-cart__content' products={this.props.cartProducts}/>
             </div>
         )
     }
